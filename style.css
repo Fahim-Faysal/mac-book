@@ -1,0 +1,12 @@
+
+.cg-margin{
+      margin-left: 100px;
+}
+.btn{
+      padding: 8px;
+      border: 1px solid black;
+}
+.btn:hover{
+      color: white;
+      background-color:black;
+}
