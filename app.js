@@ -6,6 +6,14 @@ let memoryParseCost = 0;
 let strogeParseCost = 0;
 let deliveryParseCost = 0;
 
+// final Cost claculation Function
+
+function finalCostCalculation() {
+	finalCost = base + memoryParseCost + strogeParseCost + deliveryParseCost;
+	totalCost.innerText = finalCost;
+	finalPrice.innerText = finalCost;
+}
+
 // memory calculaton function
 
 function extraMemory(increasing) {
@@ -20,15 +28,11 @@ function extraMemory(increasing) {
 	if (increasing == true) {
 		memoryCost.innerText = 0;
 		memoryParseCost = 0;
-		finalCost = base + memoryParseCost + strogeParseCost + deliveryParseCost;
-		totalCost.innerText = finalCost;
-		finalPrice.innerText = finalCost;
+		finalCostCalculation();
 	} else {
 		memoryCost.innerText = 180;
 		memoryParseCost = 180;
-		finalCost = base + memoryParseCost + strogeParseCost + deliveryParseCost;
-		totalCost.innerText = finalCost;
-		finalPrice.innerText = finalCost;
+		finalCostCalculation();
 	}
 }
 
@@ -48,21 +52,15 @@ function extraStroge(increasing) {
 	if (increasing == 256) {
 		strogeCost.innerText = 0;
 		strogeParseCost = 0;
-		finalCost = base + memoryParseCost + strogeParseCost + deliveryParseCost;
-		totalCost.innerText = finalCost;
-		finalPrice.innerText = finalCost;
+		finalCostCalculation();
 	} else if (increasing == 512) {
 		strogeCost.innerText = 100;
 		strogeParseCost = 100;
-		finalCost = base + memoryParseCost + strogeParseCost + deliveryParseCost;
-		totalCost.innerText = finalCost;
-		finalPrice.innerText = finalCost;
+		finalCostCalculation();
 	} else {
 		strogeCost.innerText = 180;
 		strogeParseCost = 180;
-		finalCost = base + memoryParseCost + strogeParseCost + deliveryParseCost;
-		totalCost.innerText = finalCost;
-		finalPrice.innerText = finalCost;
+		finalCostCalculation();
 	}
 }
 
@@ -84,15 +82,11 @@ function delivaryCost(cost) {
 	if (cost == true) {
 		extaShippingCost.innerText = 0;
 		deliveryParseCost = 0;
-		finalCost = base + memoryParseCost + strogeParseCost + deliveryParseCost;
-		totalCost.innerText = finalCost;
-		finalPrice.innerText = finalCost;
+		finalCostCalculation();
 	} else {
 		extaShippingCost.innerText = 20;
 		deliveryParseCost = 20;
-		finalCost = base + memoryParseCost + strogeParseCost + deliveryParseCost;
-		totalCost.innerText = finalCost;
-		finalPrice.innerText = finalCost;
+		finalCostCalculation();
 	}
 }
 document.getElementById('free-delivery').addEventListener('click', function() {
