@@ -43,12 +43,7 @@ document.getElementById('extra-m-sixteen').addEventListener('click', function() 
 // stroge calcultion function
 
 function extraStroge(increasing) {
-	const memoryCost = document.getElementById('extra-m-cost');
-
-	console.log(memoryParseCost);
 	const strogeCost = document.getElementById('extra-s-cost');
-
-	const deliveryCost = document.getElementById('extra-d-cost');
 
 	if (increasing == 256) {
 		strogeCost.innerText = 0;
